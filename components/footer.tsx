@@ -73,22 +73,9 @@ export function Footer() {
         <div className="border-t border-background/20 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-sm opacity-70">
-              © {currentYear} Valor Real. Todos los derechos reservados.
+              © {currentYear} Zabala Bienes Raíces. Todos los derechos
+              reservados.
             </p>
-            <nav className="flex gap-6 text-sm" aria-label="Enlaces legales">
-              <Link
-                href="#"
-                className="opacity-70 hover:opacity-100 transition-opacity"
-              >
-                Política de Privacidad
-              </Link>
-              <Link
-                href="#"
-                className="opacity-70 hover:opacity-100 transition-opacity"
-              >
-                Términos y Condiciones
-              </Link>
-            </nav>
           </div>
         </div>
       </div>

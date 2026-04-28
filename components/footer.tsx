@@ -28,7 +28,7 @@ export function Footer() {
               ></div>
               <div className="flex flex-col">
                 <span className="font-sans font-semibold text-sm leading-tight tracking-wide">
-                  VALOR REAL
+                  Zabala
                 </span>
                 <span className="text-[9px] opacity-70 uppercase tracking-widest">
                   Tasaciones

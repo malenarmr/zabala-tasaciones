@@ -16,14 +16,18 @@ const steps = [
     icon: UserCheck,
     title: "Contacto",
     description:
-      "Nos ponemos en contacto contigo para coordinar una visita o solicitar más información si es necesario.",
+      "Nos ponemos en contacto con vos para coordinar una visita o solicitar más información.",
   },
   {
     number: "03",
     icon: ClipboardCheck,
     title: "Recibí tu informe",
-    description:
-      "Obtené un informe profesional con el valor de mercado real de tu propiedad.",
+    description: (
+      <>
+        Obtené un informe profesional con el valor de mercado real de tu
+        propiedad en <strong>menos de 24hs</strong>
+      </>
+    ),
   },
 ];
 

@@ -2,7 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 
 export function Footer() {
-  const currentYear = new Date().getFullYear();
+  const currentYear = 2024;
 
   return (
     <footer className="bg-foreground text-background py-12" role="contentinfo">
@@ -35,10 +35,10 @@ export function Footer() {
                 </span>
               </div>
             </Link>
-            <p className="text-sm opacity-70 max-w-xs mt-4">
+            {/* <p className="text-sm opacity-70 max-w-xs mt-4">
               Tasaciones profesionales con respaldo legal. Parte de Zabala
               Bienes Raíces.
-            </p>
+            </p> */}
           </div>
 
           {/* Contact */}

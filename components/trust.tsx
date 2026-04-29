@@ -7,23 +7,22 @@ const features = [
   {
     icon: ShieldCheck,
     title: "Corredores Matriculados",
-    description:
-      "Todos nuestros tasadores están debidamente matriculados y certificados.",
   },
   {
     icon: FileCheck,
     title: "Informes con Validez Legal",
-    description: "Documentación aceptada en bancos, juzgados y notarías.",
+    description:
+      "Aptas para su presentación ante juzgados y otras instituciones.",
   },
   {
     icon: Clock,
-    title: "Entrega en 48-72hs",
-    description: "Recibí tu informe completo en tiempo récord.",
+    title: "Entrega 24hs",
   },
   {
     icon: CheckCircle2,
-    title: "Sin Compromiso",
-    description: "La consulta inicial es gratuita y sin obligación de venta.",
+    title: "Conoce el valor de tu propiedad",
+    description:
+      "Tu primera consulta es sin costo y tiene un único fin: asesorarte. Queremos que te sientas libre de decidir, sin ninguna obligación de venta.",
   },
 ];
 
@@ -78,7 +77,7 @@ export function Trust() {
               ¿Por qué elegirnos?
             </h2>
             <p className="text-lg opacity-90 leading-relaxed mb-8 text-pretty">
-              Desde que iniciamos nuestra inmobiliaria hace apenas un año, nos
+              Desde que iniciamos nuestra inmobiliaria hace apenas DOS años, nos
               ha motivado la firme creencia de que, con pasión y dedicación,
               podemos marcar la diferencia. Lo que nos distingue es nuestra
               capacidad para escuchar y entender las necesidades de nuestros

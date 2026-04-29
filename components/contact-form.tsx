@@ -82,8 +82,8 @@ export function ContactForm() {
             Solicitá tu tasación
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto text-pretty">
-            Completá el formulario y un asesor se pondrá en contacto para
-            coordinar la visita a tu propiedad..
+            Completá el formulario y nos comunicaremos con vos para brindarte
+            atención personalizada
           </p>
         </div>
 
@@ -92,12 +92,13 @@ export function ContactForm() {
           <div className="lg:sticky lg:top-24">
             <div className="bg-card rounded-2xl p-6 border border-border mb-6">
               <h3 className="font-sans text-xl font-semibold text-foreground mb-4">
-                ¿Por qué tasamos sin compromiso?
+                Descubrí el valor de tu propiedad sin ataduras
               </h3>
               <p className="text-muted-foreground text-sm leading-relaxed">
-                Creemos que conocer el valor de tu propiedad es el primer paso
-                para tomar decisiones informadas. Nuestra tasación sin costo te
-                permite evaluar opciones sin presión ni compromiso.
+                Saber el valor real de tu propiedad es el punto de partida para
+                cualquier gran decisión. Te brindamos una tasación profesional
+                para que proyectes tu futuro con seguridad, claridad y total
+                libertad
               </p>
             </div>
 
@@ -260,7 +261,7 @@ export function ContactForm() {
                 className="w-full bg-primary hover:bg-primary/90 text-primary-foreground font-semibold py-6 text-base"
                 disabled={isSubmitting}
               >
-                {isSubmitting ? "Enviando..." : "Solicitar Tasación Gratuita"}
+                {isSubmitting ? "Enviando..." : "Solicitar Tasación"}
               </Button>
 
               <p className="text-xs text-muted-foreground text-center">

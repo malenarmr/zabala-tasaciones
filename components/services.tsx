@@ -13,27 +13,31 @@ import { useInView } from "@/hooks/use-animations";
 const services = [
   {
     icon: Building,
-    title: "Alquiler",
-    description:
-      "Tasación de departamentos para venta o alquiler. Análisis de ubicación, amenities y estado general.",
+    title: "Tasaciones para alquiler",
+    description: "Maximiza tu renta en alquileres temporales o permanentes.",
   },
   {
     icon: Home,
-    title: "Tasaciones",
+    title: "Tasaciones para venta",
     description:
-      "Evaluación completa de casas, chalets y PHs. Consideramos lote, construcción y valor de mercado.",
+      "Análisis integral de propiedades. Realizamos tasaciones de PHs, departamentos, casas y lotes, evaluando desde el potencial del terreno y la calidad constructiva",
   },
   {
     icon: Store,
-    title: "Otro servicio",
-    description:
-      "Valuación de locales, oficinas y espacios comerciales con análisis de rentabilidad.",
+    title: "Asesoramiento en sucesiones",
+    description: (
+      <>
+        Entendemos que gestionar un <strong>patrimonio familiar</strong>, es un
+        paso delicado. Te acompañamos en todo el proceso legal y técnico para
+        que puedas regularizar tu propiedad de forma ágil.
+      </>
+    ),
   },
   {
     icon: Scale,
-    title: "Tasaciones Judiciales",
+    title: "Tasaciones con Validez Legal",
     description:
-      "Informes con validez legal para sucesiones, divorcios y procesos judiciales.",
+      "Realizamos informes técnicos certificados, ideales para procesos de sucesiones, divorcios o acuerdos de división de bienes.",
   },
 ];
 
@@ -65,16 +69,9 @@ export function Services() {
             className="font-sans text-3xl md:text-4xl font-bold text-foreground mb-4 text-balance"
           >
             <a href="https://zabalabienesraices.com.ar/" className="underline">
-              Servicios de Zabala Inmobiliaria
+              Servicios de Zabala Bienes Raíces
             </a>
           </h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto text-pretty">
-            Conocé todos nuestros servicios{" "}
-            <a href="https://zabalabienesraices.com.ar/" className="underline">
-              acá
-            </a>{" "}
-            RELLENAR TEXTO
-          </p>
         </div>
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -110,7 +107,7 @@ export function Services() {
                 </CardTitle>
               </CardHeader>
               <CardContent>
-                <CardDescription className="text-muted-foreground leading-relaxed">
+                <CardDescription className="text-black/90 leading-relaxed">
                   {service.description}
                 </CardDescription>
               </CardContent>

@@ -101,7 +101,7 @@ export function Hero({ images = DEFAULT_IMAGES }: HeroProps) {
                 onClick={scrollToContact}
                 className="bg-primary hover:bg-primary/90 text-primary-foreground font-semibold text-base px-8 py-6 transition-all duration-300 hover:scale-105 hover:shadow-lg"
               >
-                Solicitar tasación sin compromiso
+                Calcula el valor de tu propiedad
               </Button>
               <Button
                 size="lg"

@@ -13,6 +13,7 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import { CheckCircle2, Mail, MapPin } from "lucide-react";
+import { sendEmailAction } from "@/app/sendEmailAction";
 
 export function ContactForm() {
   const [isSubmitted, setIsSubmitted] = useState(false);
@@ -20,13 +21,29 @@ export function ContactForm() {
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+
     setIsSubmitting(true);
 
-    // Simular envío del formulario
-    await new Promise((resolve) => setTimeout(resolve, 1000));
+    // Guardar referencia al form ANTES del await
+    const form = e.currentTarget;
 
-    setIsSubmitting(false);
-    setIsSubmitted(true);
+    try {
+      const formData = new FormData(form);
+
+      const result = await sendEmailAction(formData);
+
+      if (result.success) {
+        form.reset();
+        setIsSubmitted(true);
+      } else {
+        alert(result.error || "Ocurrió un error");
+      }
+    } catch (error) {
+      console.error(error);
+      alert("Error al enviar el formulario");
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   if (isSubmitted) {

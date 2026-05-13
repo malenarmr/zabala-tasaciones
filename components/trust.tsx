@@ -77,7 +77,7 @@ export function Trust() {
               ¿Por qué elegirnos?
             </h2>
             <p className="text-lg opacity-90 leading-relaxed mb-8 text-pretty">
-              Desde que iniciamos nuestra inmobiliaria hace apenas DOS años, nos
+              Desde que iniciamos nuestra inmobiliaria hace apenas dos años, nos
               ha motivado la firme creencia de que, con pasión y dedicación,
               podemos marcar la diferencia. Lo que nos distingue es nuestra
               capacidad para escuchar y entender las necesidades de nuestros
@@ -93,7 +93,7 @@ export function Trust() {
 
           {/* Stats */}
           <div className="bg-primary-foreground/10 rounded-2xl p-8 md:p-10">
-            <div className="grid grid-cols-2 gap-8">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
               {features.map((feature, index) => (
                 <div
                   key={index}

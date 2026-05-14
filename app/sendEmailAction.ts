@@ -27,8 +27,8 @@ export async function sendEmailAction(formData: FormData) {
     }
 
     const response = await resend.emails.send({
-      from: "Tasaciones <onboarding@resend.dev>",
-      to: "zabala@zabalabienesraices.com",
+      from: "Tasaciones <no-reply@send.zabalabienesraices.com.ar>",
+      to: "zabala@zabalabienesraices.com.ar",
       replyTo: email,
       subject: `Solicitud de tasación - ${nombre}`,
       html: `

@@ -1,9 +1,15 @@
 "use server";
 
 import { headers } from "next/headers";
-import { Resend } from "resend";
+import nodemailer from "nodemailer";
 
-const resend = new Resend(process.env.RESEND_API_KEY);
+const transporter = nodemailer.createTransport({
+  service: "gmail",
+  auth: {
+    user: process.env.SMTP_USER,
+    pass: process.env.SMTP_PASS,
+  },
+});
 
 export async function sendEmailAction(formData: FormData) {
   try {
@@ -11,6 +17,13 @@ export async function sendEmailAction(formData: FormData) {
 
     const rateLimitRemaining = headersList.get("X-RateLimit-Remaining");
     const rateLimitLimit = headersList.get("X-RateLimit-Limit");
+
+    if (rateLimitRemaining && parseInt(rateLimitRemaining) <= 0) {
+      return {
+        success: false,
+        error: "Demasiadas solicitudes, intente más tarde",
+      };
+    }
 
     const nombre = formData.get("nombre")?.toString();
     const telefono = formData.get("telefono")?.toString();
@@ -26,23 +39,20 @@ export async function sendEmailAction(formData: FormData) {
       };
     }
 
-    const response = await resend.emails.send({
-      from: "Tasaciones <no-reply@send.zabalabienesraices.com.ar>",
-      to: "zabala@zabalabienesraices.com.ar",
+    await transporter.sendMail({
+      from: `"Tasaciones" <${process.env.SMTP_USER}>`,
+      to: "zabala@zabalabienesraices.com",
       replyTo: email,
       subject: `Solicitud de tasación - ${nombre}`,
       html: `
         <h2>Nueva solicitud de tasación</h2>
-
         <p><strong>Nombre:</strong> ${nombre}</p>
         <p><strong>Teléfono:</strong> ${telefono}</p>
         <p><strong>Email:</strong> ${email}</p>
         <p><strong>Tipo:</strong> ${tipoPropiedad}</p>
         <p><strong>Barrio:</strong> ${barrio}</p>
-
         <hr />
-
-        <p>Mensaje: ${mensaje}</p>
+        <p><strong>Mensaje:</strong> ${mensaje}</p>
       `,
     });
 
